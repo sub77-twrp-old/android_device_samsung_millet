@@ -14,8 +14,12 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/kernel_millet.mk \
-    $(LOCAL_DIR)/multirom_millet.mk \
-    $(LOCAL_DIR)/omni_millet.mk \
-    $(LOCAL_DIR)/patch_millet.mk 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, vendor/omni/config/common.mk)
+
+LOCAL_PATH := device/samsung/matisse
+
+PRODUCT_NAME := patch_millet
+PRODUCT_DEVICE := matisse
+PRODUCT_BRAND := SAMSUNG
+PRODUCT_MANUFACTURER := SAMSUNG

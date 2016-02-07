@@ -65,3 +65,7 @@ TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_INCLUDE_NTFS_3G := true
+
+PRODUCT_COPY_FILES += bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
+PRODUCT_PACKAGES += charger charger_res_images
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0 persist.sys.usb.config=mtp
